@@ -13,7 +13,7 @@ View the working:
 
 ## Tech Stack
 - **Framework**: FastAPI
-- **AI Model**: Gemini Pro
+- **AI Model**: Gemini Flash
 - **Deployment**: Render
 - **Language**: Python 3.10
 
