@@ -5,13 +5,12 @@ import google.generativeai as genai
 from dotenv import load_dotenv
 import os
 
-# Load environment variables
+
 load_dotenv()
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
 app = FastAPI(title="MoodDecode with Gemini")
 
-# Enable CORS
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -20,7 +19,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Set up Gemini model with chat
+
 model = genai.GenerativeModel("models/gemini-1.5-flash-latest")
 
 class TextInput(BaseModel):
